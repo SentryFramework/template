@@ -1,0 +1,42 @@
+{
+  "name": "package-name",
+  "version": "3.0.0",
+  "description": "Package Description",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "build": "yarn dlx tsc",
+    "build:watch": "yarn dlx tsc --watch",
+    "format": "prettier --config .prettierrc.json src/**/*.ts --write",
+    "start": "yarn node --enable-source-maps dist",
+    "prepublishOnly": "yarn build",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SentryFramework/template.git"
+  },
+  "keywords": [],
+  "author": "PenPow",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SentryFramework/template/issues"
+  },
+  "homepage": "https://github.com/SentryFramework/template#readme",
+  "packageManager": "yarn@3.2.0",
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.1",
+    "@commitlint/config-conventional": "^16.2.1",
+    "@types/node": "^17.0.21",
+    "@typescript-eslint/eslint-plugin": "^5.13.0",
+    "@typescript-eslint/parser": "^5.13.0",
+    "eslint": "^8.10.0",
+    "eslint-config-marine": "^9.3.2",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "prettier": "^2.5.1",
+    "typescript": "^4.6.2"
+  }
+}
