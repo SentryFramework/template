@@ -1,0 +1,26 @@
+name: Feature Request
+description: Request a new feature
+labels: ['feature']
+assignees:
+  - penpow
+  - kyomidev
+body:
+  - type: markdown
+    attributes:
+      value: Please fill in the following details, so we can understand the request
+  - type: textarea
+    id: feature
+    attributes:
+      label: What do you want to add?
+      description: Describe in detail the feature you want to be added, along with code samples and or implementation notes
+      placeholder: Please be as detailed as possible
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](../CODE_OF_CONDUCT.md)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
