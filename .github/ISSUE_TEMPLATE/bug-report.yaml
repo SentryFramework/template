@@ -1,0 +1,39 @@
+name: Bug Report
+description: File a bug report
+labels: ['bug']
+assignees:
+  - penpow
+  - kyomidev
+body:
+  - type: markdown
+    attributes:
+      value: Please fill in the following details, so we can understand the issue at hand
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What Happened?
+      description: What issue occured
+      placeholder: Please describe in detail what happened, along with what you expected to happen
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Sentry Version
+      description: To obtain this, please check your Dockerfile, and give the first line (something along the lines of `FROM ghcr/PenPow/Sentry:xxxxx`)
+      placeholder: Version xxxxxx
+      value: Latest
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Logs
+      description: Please send us the logs, including the stack trace/error
+      render: sh
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](../CODE_OF_CONDUCT.md)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
